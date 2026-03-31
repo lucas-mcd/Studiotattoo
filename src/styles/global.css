@@ -1089,35 +1089,43 @@ body {
   /* Menu Hambúrguer - Mobile Show */
   .hamburger-menu {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     z-index: 100;
-    background: none;
+    background: rgba(0, 0, 0, 0.4);
     border: none;
-    width: 45px;
-    height: 45px;
+    width: 36px;
+    height: 36px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     padding: 0;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+  }
+
+  .hamburger-menu:hover {
+    background: rgba(0, 247, 255, 0.15);
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
   }
 
   .hamburger-menu span {
     display: block;
-    width: 28px;
-    height: 3px;
+    width: 20px;
+    height: 2.5px;
     background: var(--cyan);
-    border-radius: 2px;
+    border-radius: 1.5px;
     transition: all 0.3s ease;
-    box-shadow: 0 0 8px rgba(0, 247, 255, 0.3);
+    box-shadow: 0 0 6px rgba(0, 247, 255, 0.3);
   }
 
   .hamburger-menu:hover span {
     background: var(--pink);
-    box-shadow: 0 0 12px rgba(0, 247, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.4);
   }
 
   .hamburger-menu.active span:nth-child(1) {
@@ -1203,15 +1211,6 @@ body {
   .sobre-mim-btn {
     padding: 12px 15px;
     font-size: 0.85rem;
-  }
-
-  .intro-logo {
-    width: 250px;
-  }
-
-  .line {
-    font-size: 0.9rem;
-    padding: 0 15px;
   }
 
   .content {
@@ -1450,10 +1449,16 @@ body {
 /* ============================= */
 @media (max-width: 600px) {
 
-  /*  Remove efeitos pesados */
-  * {
+  /*  Remove efeitos pesados, mas preserva intro completamente */
+  .about-menu,
+  .contact-menu,
+  .sidebar,
+  .gallery-item,
+  .card,
+  .about-card,
+  .contact-card,
+  .svgContainer {
     backdrop-filter: none !important;
-    filter: none !important;
   }
 
   /*  Desliga glow do mouse */
@@ -1462,7 +1467,6 @@ body {
   }
 
   /*  Simplifica fundos com blur */
-  .intro,
   .about-menu,
   .contact-menu,
   .sidebar,
@@ -1475,12 +1479,25 @@ body {
     box-shadow: none !important;
   }
 
-  /*  Remove animações */
-  *,
-  *::before,
-  *::after {
+  /*  Remove animações específicas (mas mantém intro) */
+  .menu-item,
+  .card,
+  .gallery-item,
+  .about-card,
+  .contact-card,
+  .sidebar,
+  .about-photo {
     animation: none !important;
     transition: none !important;
+  }
+
+  /*  Mantém as animações da intro ativas */
+  .intro-logo {
+    animation: pulseLogo 2.5s ease-in-out infinite !important;
+  }
+
+  .line.show {
+    animation: slideLine 1s ease forwards !important;
   }
 
   /*  Scroll mais fluido */

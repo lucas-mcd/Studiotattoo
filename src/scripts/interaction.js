@@ -21,32 +21,6 @@ if (mouseGlow) {
 }
 
 // ===============================
-// INTRO ANIMADA
-// ===============================
-const intro = document.getElementById("intro");
-const mainSite = document.getElementById("main-site");
-const lines = document.querySelectorAll(".line");
-
-function animateIntroLines() {
-  lines.forEach((line, index) => {
-    setTimeout(() => {
-      line.classList.add("show");
-    }, index * 700);
-  });
-
-  if (intro && mainSite) {
-    setTimeout(() => {
-      intro.classList.add("hide");
-      mainSite.classList.remove("hidden");
-    }, 4200);
-  }
-}
-
-window.addEventListener("load", () => {
-  setTimeout(animateIntroLines, 1000);
-});
-
-// ===============================
 // MENU INTERATIVO
 // ===============================
 const styleMenuItems = document.querySelectorAll(".menu-item[data-style]");
