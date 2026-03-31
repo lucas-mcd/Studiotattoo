@@ -1445,3 +1445,75 @@ body {
 .site-footer .brand {
   color: rgba(255, 255, 255, 0.8);
 }
+/* ============================= */
+/* MOBILE PERFORMANCE OVERRIDES */
+/* ============================= */
+@media (max-width: 600px) {
+
+  /* 🔥 Remove efeitos pesados */
+  * {
+    backdrop-filter: none !important;
+    filter: none !important;
+  }
+
+  /* 🔥 Desliga glow do mouse */
+  .mouse-glow {
+    display: none !important;
+  }
+
+  /* 🔥 Simplifica fundos com blur */
+  .intro,
+  .about-menu,
+  .contact-menu,
+  .sidebar,
+  .gallery-item,
+  .card,
+  .about-card,
+  .contact-card,
+  .svgContainer {
+    background: rgba(10, 10, 10, 0.92) !important;
+    box-shadow: none !important;
+  }
+
+  /* 🔥 Remove animações */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* 🔥 Scroll mais fluido */
+  body {
+    overflow: auto;
+  }
+
+  .content {
+    overflow-y: auto;
+    scroll-behavior: auto;
+  }
+
+  /* 🔥 Remove efeitos hover (mobile não usa) */
+  .menu-item:hover,
+  .card:hover,
+  .gallery-item:hover,
+  .contact-card:hover,
+  .Btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 🔥 Galeria mais leve */
+  .gallery-item img {
+    transform: none !important;
+  }
+
+  /* 🔥 Evita repaint constante */
+  .grid-bg,
+  .noise,
+  .tribal-overlay,
+  .content-glow {
+    display: none !important;
+  }
+
+}
