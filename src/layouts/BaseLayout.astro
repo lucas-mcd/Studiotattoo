@@ -24,5 +24,10 @@ const { title } = Astro.props;
   <div class="tribal-overlay"></div>
 
   <slot />
+  
+  <script>
+    // Importar o script de forma assíncrona após o carregamento
+    import('../scripts/interaction.js');
+  </script>
 </body>
 </html>
