@@ -1450,18 +1450,18 @@ body {
 /* ============================= */
 @media (max-width: 600px) {
 
-  /* 🔥 Remove efeitos pesados */
+  /*  Remove efeitos pesados */
   * {
     backdrop-filter: none !important;
     filter: none !important;
   }
 
-  /* 🔥 Desliga glow do mouse */
+  /*  Desliga glow do mouse */
   .mouse-glow {
     display: none !important;
   }
 
-  /* 🔥 Simplifica fundos com blur */
+  /*  Simplifica fundos com blur */
   .intro,
   .about-menu,
   .contact-menu,
@@ -1475,7 +1475,7 @@ body {
     box-shadow: none !important;
   }
 
-  /* 🔥 Remove animações */
+  /*  Remove animações */
   *,
   *::before,
   *::after {
@@ -1483,7 +1483,7 @@ body {
     transition: none !important;
   }
 
-  /* 🔥 Scroll mais fluido */
+  /*  Scroll mais fluido */
   body {
     overflow: auto;
   }
@@ -1493,7 +1493,7 @@ body {
     scroll-behavior: auto;
   }
 
-  /* 🔥 Remove efeitos hover (mobile não usa) */
+  /*  Remove efeitos hover (mobile não usa) */
   .menu-item:hover,
   .card:hover,
   .gallery-item:hover,
@@ -1503,12 +1503,12 @@ body {
     box-shadow: none !important;
   }
 
-  /* 🔥 Galeria mais leve */
+  /*  Galeria mais leve */
   .gallery-item img {
     transform: none !important;
   }
 
-  /* 🔥 Evita repaint constante */
+  /*  Evita repaint constante */
   .grid-bg,
   .noise,
   .tribal-overlay,
@@ -1516,4 +1516,13 @@ body {
     display: none !important;
   }
 
+}
+#hamburger-menu {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#hamburger-menu.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
