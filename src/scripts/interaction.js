@@ -72,6 +72,7 @@ const sobreMimBtn = document.getElementById("sobre-mim-btn");
 const aboutMenu = document.getElementById("about-menu");
 const closeAboutBtn = document.getElementById("close-about");
 const proceedAboutBtn = document.getElementById("proceed-about");
+const mainSite = document.getElementById("main-site");
 
 // Função única para fechar e ir ao Old School
 function proceedFromAbout(e) {
